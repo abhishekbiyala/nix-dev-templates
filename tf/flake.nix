@@ -23,6 +23,7 @@
           terraform
           tflint
           terragrunt
+          infracost
         ];
 
         shellHook = with pkgs; ''
