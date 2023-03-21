@@ -16,6 +16,8 @@
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
+      tfupdate = pkgs.callPackage ./tfupdate/default.nix { };
+      hcledit = pkgs.callPackage ./hcledit/default.nix { };
     in
     {
       devShells.default = pkgs.mkShell {
@@ -24,6 +26,11 @@
           tflint
           terragrunt
           infracost
+          checkov
+          terraform-docs
+          tfsec
+          tfupdate
+          hcledit
         ];
 
         shellHook = with pkgs; ''
