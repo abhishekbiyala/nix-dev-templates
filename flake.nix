@@ -13,6 +13,11 @@
           path = ./tf;
           description = "HashiCorp DevOps tools development environment";
         };
+
+        actions = {
+          path = ./actions;
+          description = "GitHub Actions development environment";
+        };
       };
     } // flake-utils.lib.eachDefaultSystem (system:
       let
