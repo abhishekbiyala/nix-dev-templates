@@ -28,7 +28,7 @@
         ];
 
         shellHook = with pkgs; ''
-          echo "terraform `${terraform}/bin/terraform --version`"
+          echo "act `${act}/bin/act --version`"
         '';
       };
     });
